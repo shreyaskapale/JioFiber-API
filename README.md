@@ -10,10 +10,11 @@
 I do not own JioFiber or any naming rights w.r.t to it .This is just an unoffical api made for jioFiber router. For any disputes related to naming of the package
 send an email to : kapale.shreyas@gmail.com
 
-### Installation
+### Installation [`pypi submission under progress`]
 ```sh
 $ pip install jiofiber
 ```
+
 #### JioFiberAPI Class :
 JioFiberAPI(<username>,<password>) is instantiated by username and password of your jioFiber Admin Page hosted at 192.168.29.1. The default username and password is admin and Jiocentrum. But make sure you login once externally via browser and change it.
 

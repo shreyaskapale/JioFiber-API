@@ -36,8 +36,8 @@ class JioFiberAPI:
 
       'thispage':'index.html',
       'button.login.users.dashboard':'Login',
-      'users.username':'admin', 
-      'users.password':'Kidjet.123',  
+      'users.username':'', 
+      'users.password':'',  
   }
   sessionHeaders ={
 

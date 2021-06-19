@@ -6,7 +6,7 @@ import socket
 
 
 
-__version__ = '0.1.4'
+__version__ = '0.1.7'
 
 
 # Used to create profile object for the devices connected on the JioFiber Network
@@ -38,13 +38,7 @@ class JioFiberAPI:
     "Referer": "http://192.168.29.1/platform.cgi",
     "Upgrade-Insecure-Requests": "1"
   }
-  loginPayLoad = {
 
-      'thispage':'index.html',
-      'button.login.users.dashboard':'Login',
-      'users.username':'admin', 
-      'users.password':'Kidjet.123',  
-  }
   sessionHeaders ={
 
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -59,13 +53,16 @@ class JioFiberAPI:
   
 
   def __init__(self, username:str, password:str):
-    self.loginHeaders["username"] = username
-    self.loginHeaders["password"] = password
+    self.loginPayLoad = {
 
+      'thispage':'index.html',
+      'button.login.users.dashboard':'Login',
+      'users.username':username, 
+      'users.password':password,  
+    }
   # createSession creates a session from the supplied username and password passed during object creation
   # the session cookie is saved and used for further operations    
   def createSession(self):
-
     self.session = requests.Session()
     try:
       login = loginSession=self.session.post("http://192.168.29.1/platform.cgi", data=self.loginPayLoad,headers=self.loginHeaders)

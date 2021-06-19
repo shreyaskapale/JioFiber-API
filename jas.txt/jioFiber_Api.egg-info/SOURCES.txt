@@ -1,0 +1,13 @@
+CHANGES.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+docs/index.rst
+jioFiber_Api.egg-info/PKG-INFO
+jioFiber_Api.egg-info/SOURCES.txt
+jioFiber_Api.egg-info/dependency_links.txt
+jioFiber_Api.egg-info/requires.txt
+jioFiber_Api.egg-info/top_level.txt
+jiofiber/__init__.py
+jiofiber/jioFiberAPI.py

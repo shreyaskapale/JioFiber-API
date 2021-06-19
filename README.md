@@ -12,7 +12,7 @@ send an email to : kapale.shreyas@gmail.com
 
 ### Installation
 ```sh
-$ pip install jioFiber-Api==0.1.4
+$ pip install jioFiber-Api==0.1.7
 ```
 
 #### JioFiberAPI Class :

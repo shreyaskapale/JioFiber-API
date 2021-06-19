@@ -45,7 +45,8 @@ returns a dictionary of all the devices connected to the jioFiber router
             }, 
             'mac': '9c:b2:d4:f0:e5:2f', 
             'security': ['WPA2', 'CCMP', 'PSK'], 
-            'ntime': '0 days, 3 hours, 33 minutes, 42 seconds', 'vname': 'Rivet Networks',
+            'ntime': '0 days, 3 hours, 33 minutes, 42 seconds', 
+            'vname': 'Rivet Networks',
             'ipv4': '192.168.29.45'
         
     }

@@ -4,10 +4,6 @@ import requests
 import time
 import socket
 
-
-
-
-
 # Used to create profile object for the devices connected on the JioFiber Network
 class NodeProfile:
   def __init__(self,vendorName,ipv4:str,mac:str,ntime:str,ap:list,security:list):
@@ -17,7 +13,6 @@ class NodeProfile:
     self.ntime = ntime
     self.ap = ap
     self.security = security
-
 
 # Main class to make sessions and function calls over the session
 
@@ -193,9 +188,6 @@ class JioFiberAPI:
       profileList.append(NodeProfile(data['vname'],data['ipv4'],data['mac'],data['ntime'],data['ap'],data['security'])) 
     return profileList
       
-
-
-
 # Please Make sure to call the end session after your successful requests are completed 
 # it is nescessary to end the session make sure you add a except block with endsession 
 # if your python program closes without calling endsession old session remains upto 3 min before you can use the api
@@ -206,15 +198,3 @@ class JioFiberAPI:
     self.sessionHeaders['Connection'] = 'close'
     self.session.get("http://192.168.29.1/platform.cgi",params={'page':'index.html'} ,headers=self.sessionHeaders)
     self.session.close()
-    
-    
-
-
-Api = JioFiberAPI('admin','Kidjet.123')
-Api.createSession()
-try:
-  x = Api.createNodeProfileObjects()
-  print(x[0].ap)
-except:
-  Api.endSession()
-Api.endSession()

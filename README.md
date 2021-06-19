@@ -6,15 +6,16 @@
  [![Generic badge](https://img.shields.io/badge/Python-3.7-red.svg)](https://shields.io/) [![Generic badge](https://img.shields.io/badge/License-MIT-green.svg)](https://shields.io/) 
 # Introduction
 > JioFiber-API is an unofficial Python package for JioRouters. The Api can be used to get stats and configure jio router from python.
-#### Note:
+### Note:
 I do not own JioFiber or any naming rights w.r.t to it .This is just an unoffical api made for jioFiber router. For any disputes related to naming of the package
 send an email to : kapale.shreyas@gmail.com
 
-#### Installation
+### Installation [`pypi submission under progress`]
 ```sh
 $ pip install jiofiber
 ```
-##### JioFiberAPI Class :
+
+#### JioFiberAPI Class :
 JioFiberAPI(<username>,<password>) is instantiated by username and password of your jioFiber Admin Page hosted at 192.168.29.1. The default username and password is admin and Jiocentrum. But make sure you login once externally via browser and change it.
 
 ##### NodeProfile Class:
@@ -28,12 +29,12 @@ NodeProfile consists of following data members
     security - [ ]  security and auth details 
 ```
 
-##### JioFiberAPI main methods:
+#### JioFiberAPI main methods:
 .
-##### `createSession()` 
+#### `createSession()` 
 creates a session with your jioRouter ( Logins in the router ), please make sure to logout any external browser sessions before calling this method. This method also creates a login cookie.
 
-##### `createNodeProfiles()->dict`
+#### `createNodeProfiles()->dict`
 returns a dictionary of all the devices connected to the jioFiber router 
 ```
 # Format
@@ -45,20 +46,21 @@ returns a dictionary of all the devices connected to the jioFiber router
             }, 
             'mac': '9c:b2:d4:f0:e5:2f', 
             'security': ['WPA2', 'CCMP', 'PSK'], 
-            'ntime': '0 days, 3 hours, 33 minutes, 42 seconds', 'vname': 'Rivet Networks',
+            'ntime': '0 days, 3 hours, 33 minutes, 42 seconds', 
+            'vname': 'Rivet Networks',
             'ipv4': '192.168.29.45'
         
     }
 ```
-##### `createNodeProfileObjects(self)->list`
+#### `createNodeProfileObjects(self)->list`
 returns a list of objects of device info, same as createNodeProfiles but in object form.
 
 
-##### `getSoup(str)-> object`
+#### `getSoup(str)-> object`
 returns the soup of the supplied param webpage.
 Example - object.getSoup('accessPoints.html')
 
-##### `getTableFromPage(str)->list`
+#### `getTableFromPage(str)->list`
 returns the list of rows from the supplied param webage.
 Example - object.getTableFromPage('accessPoints.html')
 
@@ -71,15 +73,15 @@ There are prebuilt methods which use getTableFromPage to fetch data from pages w
 
 #### Some helper functions
 
-##### `isLoggedIn()->bool`
+#### `isLoggedIn()->bool`
 checks if the session exists.
-##### `getCookie()->str`
+#### `getCookie()->str`
 returns token cookie
 
-##### `getVendor(str)->str`
+#### `getVendor(str)->str`
 takes mac address and returns vendor uses https://api.macvendors.com/ api.
 
-##### `decoded(str)->str`
+#### `decoded(str)->str`
 takes byte string and decodes it
 
 
@@ -89,7 +91,7 @@ takes byte string and decodes it
 ```
 import jiofiber
 
-Api = JioFiberAPI('admin','Kidjet.123')
+Api = JioFiberAPI('admin','thanos.123')
 Api.createSession()
 try:
   print(Api.createNodeProfiles())

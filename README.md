@@ -16,7 +16,7 @@ $ pip install jioFiber-Api==0.1.4
 ```
 
 #### JioFiberAPI Class :
-JioFiberAPI(<username>,<password>) is instantiated by username and password of your jioFiber Admin Page hosted at 192.168.29.1. The default username and password is admin and Jiocentrum. But make sure you login once externally via browser and change it.
+JioFiberAPI(username,password) is instantiated by username and password of your jioFiber Admin Page hosted at 192.168.29.1. The default username and password is admin and Jiocentrum. But make sure you login once externally via browser and change it.
 
 ##### NodeProfile Class:
 NodeProfile consists of following data members

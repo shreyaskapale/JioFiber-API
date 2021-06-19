@@ -10,9 +10,9 @@
 I do not own JioFiber or any naming rights w.r.t to it .This is just an unoffical api made for jioFiber router. For any disputes related to naming of the package
 send an email to : kapale.shreyas@gmail.com
 
-### Installation [`pypi submission under progress`]
+### Installation
 ```sh
-$ pip install jiofiber
+$ pip install jioFiber-Api==0.1.4
 ```
 
 #### JioFiberAPI Class :

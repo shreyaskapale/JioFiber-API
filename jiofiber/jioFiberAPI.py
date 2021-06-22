@@ -76,7 +76,7 @@ class JioFiberAPI:
     elif(login.status_code==200):
       s = BeautifulSoup(login.text, 'html.parser')
       if(s.find('h1','unAuthorised')):
-        raise Exception(self.pkgName,": Please check your credentials and make sure you dont have")
+        raise Exception(self.pkgName,": Please check your credentials and make sure you have exited from external connections to the admin page.")
     else:
       self.sessionCookie = "TeamF1Login="+loginSession.cookies.get_dict()['TeamF1Login']
       #Updates SessionHeaders with cookie for usage

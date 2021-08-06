@@ -2,8 +2,6 @@ from requests.sessions import session
 from bs4 import BeautifulSoup
 import requests
 import time
-import socket
-
 
 
 __version__ = '0.1.7'
